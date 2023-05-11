@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>richvalidator.me by Helikon</title>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/x-icon" href="./img/icon/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Reem%20Kufi" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%20Mono" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./css/richvalidator.css" />
+        <script src="https://kit.fontawesome.com/ebf2cd1147.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script src="bundle.js"></script>
+        <div id="container">
+            <div id="header">
+                <div id="header-top">
+                    <div id="logo"><span>richvalidator.me</span></div>
+                    <div id="network-list">
+                        <div class="network-selector">
+                            <input
+                                type="radio"
+                                name="network"
+                                id="kusama-selector"
+                                checked
+                                disabled
+                            />
+                            Kusama
+                        </div>
+                        <div class="network-selector">
+                            <input type="radio" name="network" id="polkadot-selector" disabled />
+                            Polkadot
+                        </div>
+                    </div>
+                </div>
+                <div id="header-bottom">
+                    <span>Start Date</span>
+                    <input id="start-date" type="date" disabled />
+                    <span>End Date</span>
+                    <input id="end-date" type="date" disabled />
+                </div>
+                <div id="identity-only-container">
+                    <input type="checkbox" id="identity-only-checkbox" checked /><span
+                        >with identity only</span
+                    >
+                </div>
+                <span id="data-info">data available from Jan 1st, 2022</span>
+            </div>
+            <div id="validator-list-container">
+                <table id="validator-list"></table>
+            </div>
+        </div>
+        <div id="page-spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <div id="loading-status"></div>
+    </body>
+</html>

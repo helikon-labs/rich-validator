@@ -1,0 +1,252 @@
+body {
+    overflow: hidden;
+    margin: 0px;
+    background-color: #000000;
+    color: #ffffffe5;
+    font-family: 'Roboto Mono', Courier, monospace;
+    font-size: 13px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #ffffffdd;
+    cursor: pointer;
+}
+
+hr {
+    color: #666;
+    background-color: #666;
+    height: 1px;
+    border: none;
+    max-width: 100%;
+    width: 100%;
+}
+
+.no-select {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.rotate {
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.rotate.up {
+    -moz-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+#page-spinner {
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-bounce 2s infinite ease-in-out;
+    animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+    50% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes sk-bounce {
+    0%,
+    100% {
+        transform: scale(0);
+        -webkit-transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+
+#loading-status {
+    display: inline;
+    position: absolute;
+    line-height: 22px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 42px;
+    text-align: center;
+}
+
+#container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+}
+
+#header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+#logo {
+    color: #ffffff;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 22px;
+}
+
+#network-list {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+#network-selector {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: baseline;
+}
+
+#header-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 8px 16px 0px 16px;
+}
+
+#identity-only-container {
+    padding: 6px 16px 4px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+}
+
+#data-info {
+    padding: 4px 16px 8px 16px;
+    font-size: 12px;
+    font-style: italic;
+    color: #ffffffaa;
+}
+
+#validator-list-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: auto;
+}
+
+#validator-list {
+    width: 90%;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+#validator-list th,
+td {
+    border: 1px #ffffff55 solid;
+}
+
+#validator-list th {
+    text-align: start;
+    padding: 6px 4px;
+}
+
+#validator-list th.position {
+    text-align: center;
+    width: 36px;
+}
+
+#validator-list th.reward {
+    text-align: center;
+    width: 30%;
+}
+
+#validator-list tr.has-sub {
+    cursor: pointer;
+}
+
+#validator-list tr.has-sub:hover {
+    background-color: #ffffff22;
+}
+
+#validator-list td {
+    text-align: start;
+    padding: 6px 6px;
+}
+
+#validator-list td.position {
+    text-align: end;
+}
+
+#validator-list td.reward {
+    text-align: end;
+}
+
+#validator-list td.display {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 4px;
+    align-items: center;
+}
+
+#validator-list td.display img {
+    width: 16px;
+    height: 16px;
+}
+
+span.indentation {
+    color: #ffffff99;
+}
+
+span.sub-count {
+    font-size: 10px;
+    margin-left: 4px;
+    opacity: 0.75;
+}
