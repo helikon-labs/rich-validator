@@ -94,6 +94,11 @@ hr {
     }
 }
 
+.link-icon {
+    width: 20px;
+    opacity: 0.9;
+}
+
 #loading-status {
     display: inline;
     position: absolute;
@@ -132,6 +137,9 @@ hr {
     color: #ffffff;
     font-family: 'Reem Kufi', sans-serif;
     font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
 }
 
 #network-list {

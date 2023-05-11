@@ -281,7 +281,7 @@ class RichValidator {
 
     private displayEntries() {
         this.ui.validatorList.innerHTML = '';
-        let html = `<tr><th class="position">#</th><th>ID/ADDRESS</th><th class="reward">TOTAL REWARD (${this.network.ticker})</th></tr>`;
+        let html = `<tr><th class="position">#</th><th>VALIDATOR ID/ADDRESS</th><th class="reward">TOTAL REWARD (${this.network.ticker})</th></tr>`;
         let position = 1;
         for (const entry of this.entries) {
             if (this.withIdentityOnly && entry.identityStatus == IdentityStatus.None) {
