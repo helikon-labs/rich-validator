@@ -146,6 +146,15 @@ class RichValidator {
     }
 
     private processChartData(data: Data) {
+        const binanceEntry: Entry = {
+            accountIdHex: 'N/A',
+            address: 'N/A',
+            display: 'Binance',
+            identityStatus: IdentityStatus.Confirmed,
+            total: 0 as unknown as bigint,
+            subs: [],
+            isExpanded: false,
+        };
         for (const reward of data.rewards) {
             const account = data.accounts.find(
                 (account: Account) => account.id == reward.validator_account_id
@@ -177,6 +186,11 @@ class RichValidator {
                 subs: [],
                 isExpanded: false,
             };
+            if (entry.display.toLocaleLowerCase('en-US').indexOf('binance') >= 0) {
+                binanceEntry.total = binanceEntry.total + entry.total;
+                binanceEntry.subs.push(entry);
+                continue;
+            }
             const existingEntry = this.entries.find(
                 (searchEntry) => searchEntry.accountIdHex == reward.validator_account_id
             );
@@ -275,6 +289,7 @@ class RichValidator {
                 this.entries.push(entry);
             }
         }
+        this.entries.push(binanceEntry);
         this.entries.sort((a, b) => Number(b.total - a.total));
         this.displayEntries();
     }
