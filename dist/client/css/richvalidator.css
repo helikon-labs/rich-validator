@@ -4,7 +4,7 @@ body {
     background-color: #000000;
     color: #ffffffe5;
     font-family: 'Roboto Mono', Courier, monospace;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 a:link,
@@ -131,7 +131,7 @@ hr {
 #logo {
     color: #ffffff;
     font-family: 'Reem Kufi', sans-serif;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 #network-list {

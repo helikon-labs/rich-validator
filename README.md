@@ -12,3 +12,5 @@ npm run dev
 ```
 
 Application should be running at localhost:8080.
+
+To build the static files use `npm run build`.
