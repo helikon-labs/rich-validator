@@ -64,8 +64,8 @@ class RichValidator {
     }
 
     private adjustDates() {
-        if (this.startDate.getFullYear() < 2022) {
-            this.startDate = new Date(2022, 0, 1);
+        if (this.startDate.getFullYear() < 2023) {
+            this.startDate = new Date(2023, 0, 1);
         }
         if (this.endDate.getTime() - this.startDate.getTime() < ONE_DAY_MS) {
             this.endDate.setTime(this.startDate.getTime() + ONE_DAY_MS);
@@ -105,7 +105,8 @@ class RichValidator {
     }
 
     async init() {
-        this.startDate = new Date(new Date().getFullYear(), 0, 1);
+        //this.startDate = new Date(new Date().getFullYear(), 0, 1);
+        this.startDate = new Date(2023, 0, 1);
         this.displayDates();
         await this.getData();
     }
