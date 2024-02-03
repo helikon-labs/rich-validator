@@ -106,7 +106,7 @@ class RichValidator {
 
     async init() {
         //this.startDate = new Date(new Date().getFullYear(), 0, 1);
-        this.startDate = new Date(2023, 0, 1);
+        this.startDate = new Date(2024, 0, 1);
         this.displayDates();
         await this.getData();
     }
